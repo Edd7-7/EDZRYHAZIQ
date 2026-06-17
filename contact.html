@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Edzry Haziq Academic Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="C:\Users\User\Downloads\Favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper header-flex">
+      <div class="brand-logo"><a href="homepage.html">EDZRY<span>HAZIQ</span></a></div>
+      <nav>
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="biodata.html">Biodata</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="family.html">Family</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <!-- In-Page Filtering Search Input Element -->
+          <li class="search-container">
+            <input type="text" id="pageSearch" placeholder="Search this page..." onkeyup="filterPageContent()">
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="wrapper">
+    <div class="page-intro-header">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.5rem;">
+        <h1 class="page-title" style="margin-bottom: 0;">Contact</h1>
+        <span style="font-size: 0.85rem; color: #64748B; font-weight: 500;">System Clock Timestamp: <strong>June 13, 2026</strong></span>
+      </div>
+      <p class="page-description">You can reach me through the official email address or by submitting the contact form provided below.</p>
+    </div>
+    
+    <div class="grid-two-columns" id="searchable-content">
+      <section class="profile-card clickable-search-card" style="padding: 0; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+        <div>
+          <div style="padding: 1.5rem 1.5rem 0 1.5rem;">
+            <h2 class="section-heading">Official Contact Directory</h2>
+          </div>
+          <div class="table-responsive-box" style="border: none; border-radius: 0;">
+            <table class="clean-table">
+              <tbody>
+                <tr>
+                  <td><strong>Email Address</strong></td>
+                  <td><a href="mailto:edzryhaziq14@gmail.com" class="style-blue">edzryhaziq14@gmail.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Phone Number</strong></td>
+                  <td>019-8596050</td>
+                </tr>
+                <tr>
+                  <td><strong>Social Media</strong></td>
+                  <td><a href="https://www.instagram.com/xttp11?utm_source=qr" target="_blank" class="style-blue">Instagram Profile Link</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Office Location</strong></td>
+                  <td style="font-size: 0.85rem; color: var(--text-dark);">UiTM Johor, Kampus Segamat, 85000 Segamat, Johor, Malaysia.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      
+      <!-- W3Schools Standard Native Mailto Contact Form Alignment -->
+      <section class="profile-card clickable-search-card">
+        <h2 class="section-heading">Send an Instant Message</h2>
+        <form action="mailto:edzryhaziq14@gmail.com" method="post" enctype="text/plain">
+          <div class="form-layout-row">
+            <label for="user-name">Full Name</label>
+            <input type="text" id="user-name" name="Full Name" class="form-input-element" placeholder="Enter your full identity name" required>
+          </div>
+          <div class="form-layout-row">
+            <label for="user-email">Email Address</label>
+            <input type="email" id="user-email" name="Email Address" class="form-input-element" placeholder="yourname@domain.com" required>
+          </div>
+          <div class="form-layout-row">
+            <label for="user-subject">Message Subject</label>
+            <input type="text" id="user-subject" name="Message Subject" class="form-input-element" placeholder="Inquiry category or topic" required>
+          </div>
+          <div class="form-layout-row">
+            <label for="user-message">Message Body Context</label>
+            <textarea id="user-message" name="Message Body Context" class="form-input-element" rows="4" placeholder="Type message parameters here..." required></textarea>
+          </div>
+          
+          <button type="submit" class="form-submit-button">Submit Secure Form</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Location Map Section Container -->
+    <section class="content-section profile-card clickable-search-card" style="margin-top: 2rem;">
+      <h2 class="section-heading">Campus Office Location Map</h2>
+      <div style="width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid var(--border-color);">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.3533869151525!2d102.72379367424681!3d2.5555460565860737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31ce31bce2b60ab7%3A0x67394d216f406eb3!2sUniversiti%20Teknologi%20MARA%20(UiTM)%20Johor%20Kampus%20Segamat!5e0!3m2!1sen!2smy!4v1718520000000!5m2!1sen!2smy" 
+          width="100%" 
+          height="350" 
+          style="border: 0; display: block;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="wrapper footer-flex-container">
+      <div>
+        <p class="style-bold" style="color: #FFFFFF;">© 2026 Edzry Haziq Bin Kamarulnizam</p>
+        <p>Diploma in Information Management | Universiti Teknologi MARA (UiTM)</p>
+      </div>
+      <div style="text-align: right;">
+        <p>Course: IMD318 Portfolio Assessment</p>
+        <p>All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterPageContent() {
+      var input = document.getElementById("pageSearch");
+      var filter = input.value.toLowerCase();
+      var cards = document.getElementsByClassName("clickable-search-card");
+      for (var i = 0; i < cards.length; i++) {
+        var contentText = cards[i].textContent || cards[i].innerText;
+        cards[i].style.display = contentText.toLowerCase().indexOf(filter) > -1 ? "" : "none";
+      }
+    }
+  </script>
+</body>
+</html>

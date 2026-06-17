@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Edzry Haziq Academic Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="C:\Users\User\Downloads\Favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper header-flex">
+      <div class="brand-logo"><a href="homepage.html">EDZRY<span>HAZIQ</span></a></div>
+      <nav>
+        <ul>
+          <li><a href="homepage.html" class="active">Home</a></li>
+          <li><a href="biodata.html">Biodata</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="family.html">Family</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <!-- W3Schools Interactive Local Real-time Search Input -->
+          <li class="search-container">
+            <input type="text" id="pageSearch" placeholder="Search this page..." onkeyup="filterPageContent()">
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="wrapper">
+    <div style="text-align: right; margin-top: 1rem; font-size: 0.85rem; color: #647488; font-weight: 500;">
+      Portfolio Last Updated: <strong>June 13, 2026</strong>
+    </div>
+    
+    <div id="searchable-content">
+      <!-- Welcome Hero Banner -->
+      <section class="content-section clickable-search-card" style="margin-top: 0.75rem;">
+        <div class="welcome-hero" style="padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+          <div class="hero-message" style="flex: 1;">
+            <h1>EDZRY HAZIQ BIN KAMARULNIZAM</h1>
+            <h2>Diploma in Information Management Student</h2>
+            <p>Welcome to my official academic resume. This portfolio documents my educational milestones, core leadership backgrounds, operational skills, and project deliverables for the IMD318 course.</p>
+          </div>
+          <div style="width: 140px; height: 140px; flex-shrink: 0;">
+            <a href="biodata.html" title="Click to view full Biodata">
+              <img src="C:\Users\User\Downloads\Edzry Haziq.jpeg" alt="Formal close-up headshot portrait photograph of Edzry Haziq bin Kamarulnizam" class="circular-avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Profile and Quick Info Details Grid -->
+      <div class="grid-two-columns" style="align-items: stretch;">
+        <section class="profile-card clickable-search-card" style="display: flex; flex-direction: column; justify-content: center;">
+          <h2 class="section-heading">Professional Summary</h2>
+          <p style="text-align: justify; margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.6;">
+            A dedicated Diploma in Information Management student at UiTM Segamat with experience in managing records, handling data, and using information systems. Skilled in maintaining databases, organizing information, and working with digital and web-based platforms. Proficient in Microsoft Office, Canva, and other digital tools for data management, documentation, and content creation.          </p>
+          <p style="text-align: justify; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0;">
+            Actively involved in community programs, volunteer activities, and student organizations, with experience in event planning, team coordination, and leadership roles. Possesses strong communication, public speaking, teamwork, problem-solving, and organizational skills, with the ability to work effectively in both academic and professional environments.          </p>
+        </section>
+        
+        <section class="profile-card clickable-search-card" style="padding: 0; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+          <div style="padding: 1.5rem 1.5rem 0.5rem 1.5rem;">
+            <h2 class="section-heading" style="margin-bottom: 0.5rem;">Quick Academic Information</h2>
+          </div>
+          <div class="table-responsive-box" style="border: none; border-radius: 0; flex-grow: 1;">
+            <table class="clean-table" style="height: 100%;">
+              <thead>
+                <tr>
+                  <th style="padding: 0.75rem 1rem;">Category</th>
+                  <th style="padding: 0.75rem 1rem;">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding: 0.75rem 1rem;"><strong>Age:</strong></td><td style="padding: 0.75rem 1rem;">21 Years Old</td></tr>
+                <tr><td style="padding: 0.75rem 1rem;"><strong>Current Status:</strong></td><td style="padding: 0.75rem 1rem;">UiTM Undergraduate Student</td></tr>
+                <tr><td style="padding: 0.75rem 1rem;"><strong>Class Group:</strong></td><td style="padding: 0.75rem 1rem;">JSI1105A</td></tr>
+                <tr><td style="padding: 0.75rem 1rem;"><strong>Course Code:</strong></td><td style="padding: 0.75rem 1rem; font-size: 0.85rem;">IMD318 (Introduction to Web Content Management and Design)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="wrapper footer-flex-container">
+      <div>
+        <p class="style-bold" style="color: #FFFFFF;">© 2026 Edzry Haziq Bin Kamarulnizam</p>
+        <p>Diploma in Information Management | Universiti Teknologi MARA (UiTM)</p>
+      </div>
+      <div style="text-align: right;">
+        <p>Course: IMD318 Portfolio Assessment</p>
+        <p>All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- W3Schools Page-filtering Algorithm script box -->
+  <script>
+    function filterPageContent() {
+      var input = document.getElementById("pageSearch");
+      var filter = input.value.toLowerCase();
+      var cards = document.getElementsByClassName("clickable-search-card");
+      
+      for (var i = 0; i < cards.length; i++) {
+        var contentText = cards[i].textContent || cards[i].innerText;
+        if (contentText.toLowerCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

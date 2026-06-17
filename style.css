@@ -1,0 +1,512 @@
+/*
+IMD318 Academic Portfolio Stylesheet Clean Editorial Corporate Design
+*/
+:root {
+  --primary-color: #0F172A;      /* Dark Slate */
+  --secondary-color: #2563EB;    /* Classic Professional Blue */
+  --bg-light: #F8FAFC;           /* Clean White-Gray Soft Page Background */
+  --surface-white: #FFFFFF;      /* Card Background */
+  --text-dark: #1E293B;          /* Primary Text */
+  --text-muted: #64748B;         /* Secondary Subdued Text */
+  --border-color: #E2E8F0;       /* Subtle layout alignment line color */
+  --padding-standard: 1.5rem;
+}
+
+/* Core Document Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Page Frame Alignment Wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Professional Header and Navigation Menu */
+header {
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.brand-logo a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.brand-logo a span {
+  color: #38BDF8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav ul li a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* W3Schools Navigation Search Box Implementation */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.search-container input[type=text] {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+  width: 160px;
+  background-color: #FFFFFF;
+  transition: width 0.3s ease;
+}
+
+.search-container input[type=text]:focus {
+  width: 200px;
+  border-color: var(--secondary-color);
+}
+
+/* Page Subheadings Layout */
+.page-intro-header {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.page-description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Main Content Structural Area */
+main {
+  flex: 1;
+  padding-bottom: 4rem;
+}
+
+.content-section {
+  margin-bottom: 3rem;
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 4px;
+  background-color: var(--secondary-color);
+}
+
+/* W3Schools Compliant Load Animation Integration */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Neat Layout Cards with Entry Animation */
+.profile-card {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--padding-standard);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  animation: fadeInUp 0.5s ease-out forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Grids and Flexbox Alignment Elements */
+.grid-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+.grid-three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Corporate Hero Banner Styling */
+.welcome-hero {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.hero-message h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-message h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #38BDF8;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-message p {
+  color: #94A3B8;
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+/* Portfolio Image Styles with Hover Animation */
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.03);
+  filter: brightness(95%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.circular-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.circular-avatar:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Neat, Standardized Tables */
+.table-responsive-box {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--surface-white);
+}
+
+.clean-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.clean-table th {
+  background-color: #F1F5F9;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.clean-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.clean-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Formal Lists Formatting */
+.formal-list {
+  list-style: none;
+}
+
+.formal-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.formal-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+ol.formal-list {
+  counter-reset: formal-counter;
+}
+
+ol.formal-list li::before {
+  counter-increment: formal-counter;
+  content: counter(formal-counter) ".";
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Vertical Timeline System */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-left: 2px solid var(--border-color);
+  padding-left: 1.5rem;
+  transition: border-left-color 0.2s ease;
+}
+
+.timeline-entry:hover {
+  border-left-color: var(--secondary-color);
+}
+
+.timeline-period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* In-Page Local Navigation Menu Links */
+.anchor-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.anchor-bar a {
+  background-color: #E2E8F0;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.85rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.anchor-bar a:hover {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+}
+
+/* Custom Text Highlights Helpers */
+.style-bold { font-weight: 700; }
+.style-italic { font-style: italic; }
+.style-underline { text-decoration: underline; }
+.style-blue { color: var(--secondary-color); font-weight: 600; }
+
+/* Balanced Media Gallery Structure */
+.gallery-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-container-box {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.01);
+}
+
+.gallery-container-box .portfolio-img {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.gallery-image-caption {
+  padding: 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+/* Neat Interactive Web Forms */
+.form-layout-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-layout-row label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.form-input-element {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background-color: #FFFFFF;
+  transition: border-color 0.2s ease;
+}
+
+.form-input-element:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.form-submit-button {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.form-submit-button:hover {
+  background-color: #1D4ED8;
+}
+
+/* Custom auxiliary additions for internship lists context */
+.tag-pill {
+  display: inline-block;
+  background-color: #EFF6FF;
+  color: var(--secondary-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  margin-right: 0.4rem;
+  border: 1px solid #DBEAFE;
+}
+
+/* Footer Section Alignment */
+footer {
+  background-color: var(--primary-color);
+  color: #94A3B8;
+  font-size: 0.8rem;
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  border-top: 3px solid var(--secondary-color);
+}
+
+.footer-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Screen Layout Balance rules */
+@media (max-width: 768px) {
+  .grid-two-columns, .welcome-hero {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+  .header-flex, .footer-flex-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    gap: 1rem;
+    text-align: center;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .search-container {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
